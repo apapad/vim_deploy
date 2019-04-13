@@ -33,7 +33,7 @@ fi
 EXPORT_FZF_DEF_COMMAND="export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'"
 SHELL_CONF="~/.bashrc"
 
-if test -e $SHELL_CONF
+if test -e $($SHELL_CONF)
 then
 	echo $EXPORT_FZF_DEF_COMMAND >> $SHELL_CONF
 else
