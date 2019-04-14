@@ -29,7 +29,7 @@ fi
  cp ./vim_init/.vimrc ~/
  fi
 
-# TODO: Add support for more or shells
+# TODO: Add support for more shells
 EXPORT_FZF_DEF_COMMAND=(export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"')
 SHELL_CONF="$HOME/.bashrc"
 
