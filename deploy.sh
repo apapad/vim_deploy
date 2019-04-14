@@ -2,7 +2,7 @@
 
 NVIM=0 # Set this to 1 to use the nvim init.vim instead of the .vimrc
 
-if test -d ~/.vim_deploy/
+if [ -d "$HOME/.vim_deploy" ]
 then
 	echo Directory vim_deploy already exists. Overwrite ?
 	read  -n1 -p "[Y/n]" answer
@@ -16,7 +16,7 @@ fi
  
  cp -r ./* ~/.vim_deploy/
  
- if test -e ~/.vimrc
+ if [ -f "$HOME/.vimrc" ]
  	then
     	echo "Found existing .vimrc in the home folder. Renaming it to .vimrc_old"
  	mv ~/.vimrc ~/.vimrc_old
@@ -30,12 +30,13 @@ fi
  fi
 
 # TODO: Add support for more or shells
-EXPORT_FZF_DEF_COMMAND="export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'"
-SHELL_CONF="~/.bashrc"
+EXPORT_FZF_DEF_COMMAND=(export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"')
+SHELL_CONF="$HOME/.bashrc"
 
-if test -e $($SHELL_CONF)
+if [ -f $SHELL_CONF ]
 then
-	echo $EXPORT_FZF_DEF_COMMAND >> $SHELL_CONF
+	echo Editing $SHELL_CONF
+	echo "${EXPORT_FZF_DEF_COMMAND[@]}" >> $SHELL_CONF
 else
 	echo File $SHELL_CONF doest not exist. Ignoring.
 fi
