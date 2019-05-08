@@ -21,3 +21,18 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories = ['~/my_snippets', 'UltiSnips']
 let g:UltiSnipsSnippetsDir = '~/my_snippets'
+
+" Fzf
+let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+
+function! s:build_quickfix_list(lines)
+	call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+	copen
+	cc
+endfunction
+
+let g:fzf_action = {
+ \ 'ctrl-q': function('s:build_quickfix_list'),
+ \ 'ctrl-t': 'tab split',
+ \ 'ctrl-x': 'split',
+ \ 'ctrl-v': 'vsplit' }
