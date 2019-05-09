@@ -43,3 +43,6 @@ try
 catch /^Vim\%((\a\+)\)\=:E185/
 		colorscheme desert
 endtry
+
+" Always show the status line
+set laststatus=2
