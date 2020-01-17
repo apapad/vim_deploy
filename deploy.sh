@@ -30,7 +30,7 @@ fi
  fi
 
 # TODO: Add support for more shells
-EXPORT_FZF_DEF_COMMAND=(export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"')
+EXPORT_FZF_DEF_COMMAND=(export FZF_DEFAULT_COMMAND=\'rg --files --no-ignore --hidden --follow --glob \"!.git/*\"\')
 SHELL_CONF="$HOME/.bashrc"
 
 if [ -f $SHELL_CONF ]
