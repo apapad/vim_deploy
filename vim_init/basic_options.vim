@@ -1,7 +1,6 @@
 scriptencoding utf-8
 set encoding=utf-8
 nnoremap Q <nop>
-set noswapfile                " Don't create swapfiles for new buffers
 syntax on                     " Syntax highlighting
 set guifont=Consolas:h10      " Set the font to Consolas
 set hidden 		              " Allows switching to other/new buffers without saving current one
@@ -46,3 +45,7 @@ endtry
 
 " Always show the status line
 set laststatus=2
+
+set directory=$HOME/temp//
+set backupdir=$HOME/temp//
+set undodir=$HOME/temp//
