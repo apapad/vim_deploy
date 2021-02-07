@@ -19,5 +19,6 @@ Plug 'https://github.com/rhysd/vim-clang-format.git'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/kshenoy/vim-signature.git'
+Plug 'https://github.com/morhetz/gruvbox.git'
 " Initialize plugin system
 call plug#end()

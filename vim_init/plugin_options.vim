@@ -1,3 +1,11 @@
+" Try to set gruvbox as the color scheme
+try
+	colorscheme gruvbox
+	set background=dark
+catch /^Vim\%((\a\+)\)\=:E185/
+		colorscheme desert
+endtry
+
 " lightline
 let g:lightline#bufferline#show_number  = 2
 let g:lightline#bufferline#shorten_path = 1

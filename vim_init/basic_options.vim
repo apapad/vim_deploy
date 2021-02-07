@@ -35,14 +35,6 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" Try to set gruvbox as the color scheme
-try
-	colorscheme gruvbox
-	set background=dark
-catch /^Vim\%((\a\+)\)\=:E185/
-		colorscheme desert
-endtry
-
 " Always show the status line
 set laststatus=2
 
