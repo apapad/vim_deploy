@@ -2,6 +2,9 @@
 try
 	colorscheme gruvbox
 	set background=dark
+	hi clear SpellBad
+	hi SpellBad cterm=underline
+	hi SpellBad gui=undercurl
 catch /^Vim\%((\a\+)\)\=:E185/
 		colorscheme desert
 endtry
